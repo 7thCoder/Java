@@ -7,28 +7,28 @@ import java.util.*;
 import java.lang.*;
 
 public class Main {
-    public static void main(String[] args) {
-        System.out.println(digitize(35231));
-    }
+  public static void main(String[] args){
+    System.out.println(solution("Stream","eam"));
+    System.out.println(solution("testis","is"));
+  }
 
-    public static int[] digitize(long n) {
-        int i;
-        String[] newArr =String.valueOf(Long.toString(n)).split("");
-        List<Integer> result = new ArrayList<Integer>();
-        
-        for(i=0; i<(newArr.length); i++){
-          result.add(Integer.parseInt(newArr[i]));
-        }
-        
-        Collections.reverse(result);
-        
-        int size = newArr.length;
-        
-        int finalRes[];
-        finalRes = new int[size];
-        for(i=0; i<(newArr.length); i++){
-          finalRes[i] = result.get(i);
-        }
-        return finalRes;
-      }
+  public static boolean solution(String str, String ending) {
+    
+    StringBuilder res = new StringBuilder();
+    int i=0;
+    int size = ending.length();
+    int size2 = str.length() - size;
+    i = size2;
+    
+    while(i <(str.length()) ){
+       res.append(str.charAt(i));
+       i++;
+    }
+    
+    
+    String fnal = res.toString();
+    
+    System.out.println("collected string: " + fnal);
+    return fnal.equals(ending);
+  }
 }
