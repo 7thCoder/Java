@@ -14,8 +14,10 @@ public class Main {
         StringBuilder str = new StringBuilder();
         int i = 0;
         int j = 0;
+        int  x = nFloors;
+        int y = x;
         for(i = 0; i<nFloors; i++){
-        while(j <= i){
+        while(j <= i){            
             str.append("*");
             j++;
         }
