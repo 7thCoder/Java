@@ -35,10 +35,8 @@ public class App {
                 }
             }
 
-            // int len = num.length;
-
-            for(a = 0; a <= count; a++){
-                if(count == 3){
+            if(count >= 3){
+                while(a < 3){
                     switch(i){
                         case 1:
                             score += 1000;
@@ -60,10 +58,11 @@ public class App {
                             break;
                         default:  
                     }
+                    a++;
                 }
-
-                else if(count > 3){
-                    for(a = 0; a < (count-3); a++){
+                
+                if(a > 3){
+                    for(int b = 0; b< 3; b++){
                         switch(i){
                             case 1:
                                 score += 100;
@@ -76,19 +75,20 @@ public class App {
                         }
                     }
                 }
-                else{
-                     switch(i){
-                            case 1:
-                                score += 100;
-                                break;
-                            case 5:
-                                score += 50;
-                                break;
-                            default:
-                            
-                        } 
-                }
             }
+            
+               
+            switch(i){
+                case 1:
+                    score += 100;
+                    break;
+                case 5:
+                    score += 50;
+                    break;
+                default:
+                
+            } 
+                
         }
         
         return score ;
