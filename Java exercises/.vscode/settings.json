@@ -1,5 +1,6 @@
 {
     "java.project.sourcePaths": [
         "exercise7"
-    ]
+    ],
+    "java.debug.settings.onBuildFailureProceed": true
 }
