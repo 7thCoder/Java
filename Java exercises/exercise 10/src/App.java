@@ -2,7 +2,7 @@
  * Greed is a dice game played with five six-sided dice. Your mission, 
  * should you choose to accept it, is to score a throw according to these rules. 
  * You will always be given an array with five six-sided dice values.
-
+ *
     Three 1's => 1000 points
     Three 6's =>  600 points
     Three 5's =>  500 points
@@ -26,17 +26,17 @@ public class App {
     public static int greedy(int[] dice){
         int count = 0;
         int score = 0;
-        int a = 0;
+        int a = 1;
 
         for(int i:dice){
             for(int j:dice){
                 if( i == j){
-                count+=1;
+                count =0;
                 }
             }
 
             if(count >= 3){
-                while(a < 3){
+                while(a <3){
                     switch(i){
                         case 1:
                             score += 1000;
@@ -62,7 +62,7 @@ public class App {
                 }
                 
                 if(a > 3){
-                    for(int b = 0; b< 3; b++){
+                    for(int b = 0; b< (count-3); b++){
                         switch(i){
                             case 1:
                                 score += 100;
