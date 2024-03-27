@@ -17,7 +17,7 @@
 
 public class App {
     public static void main(String[] args) throws Exception {
-        int[] arr = {5,1,3,4,1};
+        int[] arr = {1,1,1,3,1};
         
         System.out.println(greedy(arr));
     }
@@ -29,9 +29,10 @@ public class App {
         int a = 1;
 
         for(int i:dice){
+            count = 0;
             for(int j:dice){
                 if( i == j){
-                count =0;
+                count += 1;
                 }
             }
 
@@ -39,22 +40,22 @@ public class App {
                 while(a <3){
                     switch(i){
                         case 1:
-                            score += 1000;
+                            score = 1000;
                             break;
                         case 6:
-                            score += 600;
+                            score = 600;
                             break;
                         case 5:
-                            score += 500;
+                            score = 500;
                             break;
                         case 4:
-                            score += 400;
+                            score = 400;
                             break;
                         case 3:
-                            score += 300;
+                            score = 300;
                             break;
                         case 2:
-                            score += 200;
+                            score = 200;
                             break;
                         default:  
                     }
@@ -62,7 +63,7 @@ public class App {
                 }
                 
                 if(a > 3){
-                    for(int b = 0; b< (count-3); b++){
+                    for(int b = 0; b < (count-3); b++){
                         switch(i){
                             case 1:
                                 score += 100;
